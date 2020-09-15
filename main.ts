@@ -77,6 +77,8 @@ function playerWins() {
     function checkWinner() {
         if(scoreA > scoreB) {
         return "A";
+        } else if(scoreA == scoreB) {
+            return "No one";
         } else {
             return "B";
         }
