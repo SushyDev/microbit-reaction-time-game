@@ -2,11 +2,12 @@ let hole = false
 let gameOver = false
 let scoreA = 0
 let scoreB = 0
+let winScore = 9
 
 //If player A pressed the button while there is a hole add a point for player A
 input.onButtonPressed(Button.A, function () {
     if (hole == true) {
-        if (scoreA < 1) {
+        if (scoreA < winScore) {
             hole = false
             scoreA++
             music.playTone(Note.C, 100)
@@ -32,7 +33,7 @@ input.onButtonPressed(Button.A, function () {
 //If player B pressed the button while there is a hole add a point for player B
 input.onButtonPressed(Button.B, function () {
     if (hole == true) {
-        if (scoreB < 9) {
+        if (scoreB < winScore) {
             hole = false
             scoreB++
             music.playTone(Note.C, 100)
